@@ -109,6 +109,7 @@ public class RNMailModule extends ReactContextBaseJavaModule {
       } catch (Exception ex) {
         callback.invoke("error");
       }
+      callback.invoke("success"); // TODO research java and restructuring
     } else {
       Intent chooser = Intent.createChooser(i, "Send Mail");
       chooser.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -118,6 +119,7 @@ public class RNMailModule extends ReactContextBaseJavaModule {
       } catch (Exception ex) {
         callback.invoke("error");
       }
+      callback.invoke("success"); // TODO research java and restructuring
     }
   }
 }
